@@ -63,7 +63,7 @@ namespace NbSites.Web.Data
             var courses = new List<Course>();
             for (int i = 1; i <= seedCount; i++)
             {
-                courses.Add(new Course() { Id = $"demo-{i:000}", Title = $"演示课程{i:000}" });
+                courses.Add(new Course() { Id = $"demo-{i:000}", Name = $"演示课程{i:000}" });
             }
             return courses;
         }

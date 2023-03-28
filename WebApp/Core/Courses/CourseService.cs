@@ -17,7 +17,7 @@ namespace NbSites.Web.Core.Courses
             var query = repository.QueryAll();
             if (!string.IsNullOrWhiteSpace(args.Search))
             {
-                query = query.Where(x => x.Title.Contains(args.Search));
+                query = query.Where(x => x.Name.Contains(args.Search));
             }
             return query.ToList();
         }

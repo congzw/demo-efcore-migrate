@@ -19,7 +19,8 @@ namespace NbSites.Web.Data
             {
                 entity.ToTable("demo_course");
                 entity.HasKey(x => x.Id);
-                entity.Property(x => x.Title).HasMaxLength(100);
+                entity.Property(x => x.Name).HasMaxLength(100);
+                entity.Property(x => x.Description).HasMaxLength(2000);
             });
         }
     }
