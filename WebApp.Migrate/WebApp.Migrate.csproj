@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>NbSites.Web</RootNamespace>
+    <AssemblyName>NbSites.Web.Migrate</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApp\WebApp.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath>..\WebApp\bin\</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>
