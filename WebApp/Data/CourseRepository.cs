@@ -15,8 +15,8 @@ namespace NbSites.Web.Data
 
         public IQueryable<Course> QueryAll()
         {
-            return new List<Course>().AsQueryable();
-            //return dbContext.Courses;
+            //return new List<Course>().AsQueryable();
+            return dbContext.Courses;
         }
     }
 }

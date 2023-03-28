@@ -9,18 +9,18 @@ namespace NbSites.Web.Data
         {
         }
 
-        //public DbSet<Course> Courses { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<Course>(entity =>
-            //{
-            //    entity.ToTable("demo_course");
-            //    entity.HasKey(x => x.Id);
-            //    entity.Property(x => x.Title).HasMaxLength(100);
-            //});
+            modelBuilder.Entity<Course>(entity =>
+            {
+                entity.ToTable("demo_course");
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Title).HasMaxLength(100);
+            });
         }
     }
 }

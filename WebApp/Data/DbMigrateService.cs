@@ -49,13 +49,13 @@ namespace NbSites.Web.Data
         public async Task Seed()
         {
             await Task.CompletedTask;
-            //var courseCount = await dbContext.Courses.CountAsync();
-            //if (courseCount == 0)
-            //{
-            //    var demoCourses = CreateDemoCourses();
-            //    await dbContext.Courses.AddRangeAsync(demoCourses.ToArray());
-            //    await dbContext.SaveChangesAsync();
-            //}
+            var courseCount = await dbContext.Courses.CountAsync();
+            if (courseCount == 0)
+            {
+                var demoCourses = CreateDemoCourses();
+                await dbContext.Courses.AddRangeAsync(demoCourses.ToArray());
+                await dbContext.SaveChangesAsync();
+            }
         }
 
         private static List<Course> CreateDemoCourses(int seedCount = 3)
